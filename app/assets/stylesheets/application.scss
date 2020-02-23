@@ -15,3 +15,13 @@
  */
 
  @import "bootstrap/scss/bootstrap";
+
+
+ .container {
+  max-width: 576px;
+  padding: 2rem;
+  }
+
+  .alert-alert {
+  @extend .alert-danger;
+  }
