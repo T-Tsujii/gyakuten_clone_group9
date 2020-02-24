@@ -1,0 +1,25 @@
+<nav class="nav bg-danger d-flex align-items-center" style="height: 80px; font-size: 20px;">
+  <h1 href="#!"><a class="nav-link text-light" href="#" style="font-size: 28px;">Gyakuten9</a></h1>
+  <li class="nav-item dropdown">
+      <a class="nav-link text-light dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Rails</a>
+      <div class="dropdown-menu">
+        <%= link_to '動画教材', root_path, {class: 'dropdown-item text-danger lead'} %>
+        <a class="dropdown-item text-danger lead" href="#!">テキスト教材</a>
+        <a class="dropdown-item text-danger lead" href="#!">ライブコーディング</a>
+        <a class="dropdown-item text-danger lead" href="#!">質問集</a>
+      </div>
+    </li>
+  <a class="nav-link text-light active" href="#!">AWS講座</a>
+  <a class="nav-link text-light active" href="#!">PHP講座</a>
+  <a class="nav-link text-light active" href="#!">対談</a>
+  <a class="nav-link text-light active" href="#!">情報発信</a>
+  <a class="nav-link text-light active" href="#!">動画編集講座</a>
+  <a class="nav-link text-light active" href="#!">ライティング講座</a>
+  <a class="nav-link text-light active" href="#!">LINE@</a>
+  <% if user_signed_in? %>
+    <%= link_to "ログアウト", destroy_user_session_path, {method: :delete, class: 'nav-link text-light active'} %>
+  <% else %>
+    <%= link_to "ログイン", new_user_session_path, class: 'post nav-link text-light active' %>
+    <%= link_to "新規登録", new_user_registration_path, class: 'post nav-link text-light active' %>
+  <% end %>
+</nav>
