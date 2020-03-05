@@ -4,7 +4,7 @@
       <a class="nav-link text-light dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Rails</a>
       <div class="dropdown-menu">
         <%= link_to '動画教材', href="/index", {class: 'dropdown-item text-danger lead'} %>
-        <a class="dropdown-item text-danger lead" href="#!">テキスト教材</a>
+        <%= link_to 'テキスト教材', texts_path, {class: 'dropdown-item text-danger lead'} %>
         <a class="dropdown-item text-danger lead" href="#!">ライブコーディング</a>
         <a class="dropdown-item text-danger lead" href="#!">質問集</a>
       </div>

@@ -4,5 +4,5 @@ Rails.application.routes.draw do
   get 'index' => 'movies#index'
   root 'movies#index'
   devise_for :users
-  resources :users
+  resources :users, :texts
 end
