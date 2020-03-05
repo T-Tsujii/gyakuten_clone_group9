@@ -1,0 +1,52 @@
+<%= stylesheet_link_tag "questions", :media => "all" %>
+
+<div class="container">
+
+ <div class="questions">
+   <h1>新規投稿</h1>
+   <form class="" action="index.html" method="post">
+     <div class="form-group">
+       <label for="formGroupExampleInput">【質問】</label>
+       <textarea type="text" class="form-control" rows="3" id="formGroupExampleInput"></textarea>
+     </div>
+     <div class="form-group">
+       <label for="formGroupExampleInput2">【詳細】</label>
+       <textarea type="text" class="form-control" rows="5" id="formGroupExampleInput"></textarea>
+     </div>
+     <div class="form-group">
+       <input class="btn btn-primary btn-block btn-lg"type="submit" name="commit" value="送信">
+     </div>
+   </form>
+
+   <section class="questions">
+
+   <% @questions.each do |question| %>
+
+     <div class="question-container container">
+       <%= link_to question_path(question) do %>
+           <div class="row">
+
+             <div class="col-6">
+               <p class="question-title"><%= question.title %></p>
+             </div>
+
+             <div class="col-6 question-date">
+               <div class="row">
+                 <div class="col-12 col-md-6">
+                   <p>質問日</p>
+                 </div>
+                 <div class="col-12 col-md-6">
+                   <p><%= question.updated_at.strftime("%Y") %>年<%= question.updated_at.strftime("%m") %>月<%= question.updated_at.strftime("%d") %>日</p>
+                 </div>
+               </div>
+             </div>
+           </div>
+       <% end %>
+     </div>
+
+   <% end %>
+
+   </section>
+
+  </div>
+ </div>
