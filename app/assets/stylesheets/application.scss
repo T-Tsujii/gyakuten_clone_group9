@@ -12,14 +12,26 @@
  *
  */
 
- @import "bootstrap/scss/bootstrap";
+
+@import "bootstrap/scss/bootstrap";
 
 
- .container {
-  max-width: 576px;
-  padding: 2rem;
-  }
+.container {
+width: 100%;
+padding: 50px 0 80px 0;
+max-width: 710px;
+margin: 0 auto;
+}
 
-  .alert-alert {
-  @extend .alert-danger;
-  }
+.alert-alert {
+@extend .alert-danger;
+}
+
+.footer a {
+padding: 0 20px;
+font-size: 2em;
+}
+
+.img-thumbnail {
+max-width: 65%;
+}

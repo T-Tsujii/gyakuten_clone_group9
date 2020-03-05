@@ -1,0 +1,80 @@
+genre,title,content
+Basic,Macのショートカットキー,"パソコンになれてないなら、まずはショートカットキーから使えるようにしていきましょう。ここにあげてあるショートカットキーを使えないと、プログラミングの学習効率は全く上がらないです。
+
+プログラマーなるなら必須中の必須なので、ぜひ使いこなせるようにしてください。絶対にこれだけは覚えて！というショートカットキーは以下の通り。
+
+上書き保存
+
+```
+command + s
+```
+
+コピー
+
+```
+command + c
+```
+"
+Basic,Linuxコマンド,"Linuxコマンドは、Ruby on Railsアプリを開発するときにもよく使うコマンドです。Macでプログラミングを学ぶ際に、このLinuxコマンドの知識が必須となりますので、一つ一つ確認していきましょう。
+
+また、Linuxコマンドにはたくさんの種類がありますが、こちらではよく使用するコマンドを抽出して載せるようにします。上に書いてあるものから順に覚えて行くと無駄なく学習することができます。
+
+## cd
+ディレクトリ間を移動するときのコマンドは以下のようになります。 `directory_name` には、自分が移動したいディレクトリの名前を入れましょう。
+
+```
+cd directory_name
+```"
+Basic,Slackを使用したいろんなマークダウン記法,"Slackを使いこなすと、プログラミング学習の効率もぐんと上がる（特に質問の仕方が上手くなる）ので、ぜひマークダウン記法を利用してみてください！
+
+
+|No.|記入方法|用途|
+|---|---|---|
+|1|@hoge|hogeさん、あるいは hoge グループあてのコメントになる|
+|2|#hoge|	チャンネル　hoge へのリンクになる|
+|3| \`サンプルコード \`|ボーダーで囲まれ、文字色赤、背景灰色になる|
+|4| \`\`\` サンプルコード \`\`\` |ボーダーで囲まれ、 \`\`\` で発言を開始すると再び \`\`\` が来るまでは改行しても送信しない|
+|5|>引用文|引用表現にする|
+|6|>>>引用文|改行含めた段落全体を引用表現にする|
+|7|\_slack_|文字をイタリックにする|
+|8|\*slack*|文字をボールドにする|
+|9|\~slack~|文字をストライク（取り消し線）にする|"
+Basic,Atomの便利な使い方,コンテンツ4
+Basic,超便利なMarkdownの基本,コンテンツ5
+Basic,現場でやったらあかんこと,コンテンツ6
+Git,Gitの基本,コンテンツ7
+Git,Gitで使用するテキストエディタ、Vimの使い方,コンテンツ8
+Git,Gitコマンド一覧,コンテンツ9
+Git,GitとGithubを利用した共同開発,コンテンツ10
+Git,Gitコマンドの状況に応じた使い分け,コンテンツ11
+Ruby,入出力を行うためのメソッド一覧,コンテンツ12
+Ruby,変数,コンテンツ13
+Ruby,条件分岐,コンテンツ14
+Ruby,メソッド,コンテンツ15
+Ruby,配列,コンテンツ16
+Ruby,繰り返し処理,コンテンツ17
+Ruby,ハッシュ,コンテンツ18
+Ruby,オブジェクト指向,コンテンツ19
+Ruby,RSpec,コンテンツ20
+Ruby,YouTube検索を実装するAPI,コンテンツ21
+SQL,SQLの基本,コンテンツ22
+Ruby on Rails,Ruby on Rails の基本,コンテンツ23
+Ruby on Rails,Ruby on Rails の環境構築,コンテンツ24
+Ruby on Rails,Ruby on Rails で Hello World!!,コンテンツ25
+Ruby on Rails,Ruby on Rails アプリのデプロイ,コンテンツ26
+Ruby on Rails,CRUD処理の実装,コンテンツ27
+Ruby on Rails,Active Recordの様々なメソッド,コンテンツ28
+Ruby on Rails,Active Record の様々な削除メソッド,コンテンツ29
+Ruby on Rails,resources を使ったCRUD処理の実装,コンテンツ30
+Ruby on Rails,Rails Best Practice の導入,コンテンツ31
+Ruby on Rails,Bootstrap の導入,コンテンツ32
+Ruby on Rails,CSVデータインポート機能,コンテンツ33
+Ruby on Rails,Rakeタスク,コンテンツ34
+Ruby on Rails,ログイン機能,コンテンツ35
+Ruby on Rails,管理者画面,コンテンツ36
+Ruby on Rails,検索機能,コンテンツ37
+Ruby on Rails,画像投稿機能,コンテンツ38
+Ruby on Rails,テストコードの実装（RSpec）,コンテンツ39
+Ruby on Rails,RailsアプリへのMarkdownの導入,コンテンツ40
+Other,RailsアプリへのjQueryの導入,コンテンツ41
+Other,React の導入,コンテンツ42
