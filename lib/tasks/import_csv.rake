@@ -1,4 +1,3 @@
-# CSVファイルを扱うために必要
 require 'csv'
 
 # 名前空間 => import
@@ -28,4 +27,5 @@ namespace :import_csv do
       puts "インポートに失敗：UnknownAttributeError"
     end
   end
+
 end

@@ -1,0 +1,34 @@
+
+<div class="container">
+  <section id="take_of_rails">
+  <div class="cover text-center">
+    <a target="_blank" href="https://freelance.cat-algorithm.com/apply_for_gyakuten_members/">
+      <img src="https://arcane-gorge-21903.herokuapp.com/assets/take_off_rails_banner-105faa98cf392edca9a769846fc68df6d47c9039b587fc3c1b84ef73a2cfeb93.jpg" class="img-thumbnail" alt="take_off_rails"/>
+  </a>    <p>サロン特別割引適用パスワード：hogehoge</p>
+  </div>
+  </section>
+  <h2 class="text-center">Railsテキスト教材</h2>
+    <div class="table-responsive">
+      <table class="table table-striped">
+          <thead class="bg-danger text-white">
+              <tr>
+                <th class="w-1">No.</th>
+                <th class="w-2">ジャンル</th>
+                <th class="w-5">内容</th>
+              </tr>
+          </thead>
+          <tbody>
+            <% @texts.each.with_index(1) do |text, i| %>
+              <tr>
+                <td><%= i %></td>
+                <td><%= text.genre %></td>
+                <td><%= link_to text.title, text_path(text.id) %></td>
+                <% if i == 36 %>
+                  <% break %>
+                <% end %>
+              </tr>
+            <% end %>
+          </tbody>
+      </table>
+    </div>
+</div>
