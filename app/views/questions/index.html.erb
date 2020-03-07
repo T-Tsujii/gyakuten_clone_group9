@@ -4,19 +4,22 @@
 
  <div class="questions">
    <h1>新規投稿</h1>
-   <form class="" action="index.html" method="post">
-     <div class="form-group">
-       <label for="formGroupExampleInput">【質問】</label>
-       <textarea type="text" class="form-control" rows="3" id="formGroupExampleInput"></textarea>
+
+   <%= form_with model:@question do |form| %>
+     <div class="form-group d-flex flex-column">
+       <%= form.label :question, "【質問】" %>
+       <%= form.text_area :question,rows: 3,class: "form-control" %>
+     </div>
+     <div class="form-group d-flex flex-column">
+       <%= form.label :question, "【詳細】" %>
+       <%= form.text_area :detail,rows: 5,class: "form-control"  %>
      </div>
      <div class="form-group">
-       <label for="formGroupExampleInput2">【詳細】</label>
-       <textarea type="text" class="form-control" rows="5" id="formGroupExampleInput"></textarea>
+       <%= form.submit "送信", class: "btn btn-primary btn-block btn-lg" %>
      </div>
-     <div class="form-group">
-       <input class="btn btn-primary btn-block btn-lg"type="submit" name="commit" value="送信">
-     </div>
-   </form>
+
+   <% end %>
+
 
    <section class="questions">
 
@@ -31,14 +34,8 @@
              </div>
 
              <div class="col-6 question-date">
-               <div class="row">
-                 <div class="col-12 col-md-6">
                    <p>質問日</p>
-                 </div>
-                 <div class="col-12 col-md-6">
-                   <p><%= question.updated_at.strftime("%Y") %>年<%= question.updated_at.strftime("%m") %>月<%= question.updated_at.strftime("%d") %>日</p>
-                 </div>
-               </div>
+                   <p><%= l question.updated_at, format: :short %></p>
              </div>
            </div>
        <% end %>

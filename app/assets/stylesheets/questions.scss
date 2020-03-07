@@ -7,26 +7,35 @@
 .questions
 {
   padding-top: 10%;
+
+  h1
+  {
+    font-size: 30px;
+  }
+
 }
-.questions h1
-{
-  font-size: 30px;
-}
+
 
 
 .question-container
 {
-  height: 150px;
+  min-height: 150px;
   width: 100%;
   border: 2px solid black;
   border-radius: 10px;
   transition: transform .5s ease-in-out;
   margin-bottom: 10%;
   cursor: pointer;
-}
-.question-container a
-{
-  text-decoration: none;
+  a
+  {
+    text-decoration: none;
+  }
+
+  .row
+  {
+    margin: 5px;
+  }
+
 }
 
 .question-container:hover
@@ -35,23 +44,21 @@
   transform: translateY(-10%);
 }
 
-.question-container .row
-{
-  margin: 5px;
-}
-
 
 .question-title
 {
   margin: 5px;
   color: black;
 }
+
 .question-date
 {
+  display: flex;
+  justify-content: flex-end;
 
-}
-.question-date p
-{
-  font-size: 16px;
-  color: #BBBBBB;
+  p
+  {
+    font-size: 16px;
+    color: #BBBBBB;
+  }
 }
