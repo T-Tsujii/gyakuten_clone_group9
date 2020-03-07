@@ -26,11 +26,9 @@ gem 'jbuilder', '~> 2.7'
 # gem 'image_processing', '~> 1.2'
 
 gem 'devise'
-
 #bootsrapviews
 gem 'devise-bootstrap-views', '~> 1.0'
 
-#日本語化
 gem 'rails-i18n'
 gem 'devise-i18n'
 

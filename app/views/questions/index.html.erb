@@ -1,0 +1,49 @@
+<%= stylesheet_link_tag "questions", :media => "all" %>
+
+<div class="container">
+
+ <div class="questions">
+   <h1>新規投稿</h1>
+
+   <%= form_with model:@question do |form| %>
+     <div class="form-group d-flex flex-column">
+       <%= form.label :question, "【質問】" %>
+       <%= form.text_area :question,rows: 3,class: "form-control" %>
+     </div>
+     <div class="form-group d-flex flex-column">
+       <%= form.label :question, "【詳細】" %>
+       <%= form.text_area :detail,rows: 5,class: "form-control"  %>
+     </div>
+     <div class="form-group">
+       <%= form.submit "送信", class: "btn btn-primary btn-block btn-lg" %>
+     </div>
+
+   <% end %>
+
+
+   <section class="questions">
+
+   <% @questions.each do |question| %>
+
+     <div class="question-container container">
+       <%= link_to question_path(question) do %>
+           <div class="row">
+
+             <div class="col-6">
+               <p class="question-title"><%= question.title %></p>
+             </div>
+
+             <div class="col-6 question-date">
+                   <p>質問日</p>
+                   <p><%= l question.updated_at, format: :short %></p>
+             </div>
+           </div>
+       <% end %>
+     </div>
+
+   <% end %>
+
+   </section>
+
+  </div>
+ </div>
