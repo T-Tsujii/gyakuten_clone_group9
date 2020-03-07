@@ -68,4 +68,16 @@ yarn-debug.log*
 /storage/*
 !/storage/.keep
 
+
+/public/packs
+/public/packs-test
+/node_modules
+/yarn-error.log
+yarn-debug.log*
+.yarn-integrity
+
+# Ignore .idea
+.idea/
+
+# Ignore .DS_Store
 .DS_Store

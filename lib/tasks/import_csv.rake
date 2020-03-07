@@ -1,4 +1,4 @@
-# CSVファイルを扱うために必要
+
 require 'csv'
 
 # 名前空間 => import
@@ -6,7 +6,6 @@ namespace :import_csv do
   # タスクの説明
   desc "CSVデータをインポートするタスク"
 
-  # タスク名 => users
   task questions: :environment do
     # インポートするファイルのパスを取得
     path = File.join Rails.root, "db/csv_data/question_data.csv"
@@ -28,4 +27,30 @@ namespace :import_csv do
       puts "インポートに失敗：UnknownAttributeError"
     end
   end
+=======
+require 'csv'
+
+namespace :import_csv do
+  desc "CSVデータインポート"
+
+  task texts: :environment do
+  # インポートするファイルパス
+  path = File.join Rails.root, "db/csv_data/text_data.csv"
+  list = []
+  CSV.foreach(path, headers: true) do |row|
+    list << {
+      genre: row["genre"],
+      title: row["title"],
+      content: row["content"]
+    }
+  end
+  puts "インポート処理を開始".blue
+  # インポートができなかった場合
+  begin
+    Text.create!(list)
+    puts "インポート完了!!".green
+  rescue ActiveModel::UnknownAttributeError => invalid
+    puts "インポートに失敗：UnknownAttributeError".red
+  end
+end
 end
