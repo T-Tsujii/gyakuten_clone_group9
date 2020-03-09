@@ -1,16 +1,5 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>GyakutenCloneGroup9</title>
-    <meta name="csrf-param" content="authenticity_token" />
-<meta name="csrf-token" content="XTnbtRf2vy67i0sT/TlOE8IYuNnbfrRzf4L/OslzblkPFiwtqnGbXySj2TeupIIvlZJ0C37TYFhcPigVTETdNA==" />
-    
-
-    <%= stylesheet_link_tag "movies", :media => "all" %>
-  </head>
-
   <body>
-    <% @movies.first(10).each do |movie| %> 
+    <% @movies.each do |movie| %> 
       <div class="text-center">
       <div class="movie-title">
         <%= movie.title %>
@@ -21,4 +10,3 @@
   </div> 
     <% end %>  
   </body>
-</html>

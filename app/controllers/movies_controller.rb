@@ -1,7 +1,7 @@
 class MoviesController < ApplicationController
 
   def index
-    @movies = Movie.select("title",'url')
+    @movies = Movie.order(:id)
   end
 
 end
