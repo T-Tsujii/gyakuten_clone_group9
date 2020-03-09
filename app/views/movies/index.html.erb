@@ -6,22 +6,19 @@
 <meta name="csrf-token" content="XTnbtRf2vy67i0sT/TlOE8IYuNnbfrRzf4L/OslzblkPFiwtqnGbXySj2TeupIIvlZJ0C37TYFhcPigVTETdNA==" />
     
 
-    <link rel="stylesheet" media="all" href="/assets/application.debug-d3d57650b9ac8bb4bc13776a9a6e1649eda276ea9b61ba1e2f324b99bff96336.css" data-turbolinks-track="reload" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <%= stylesheet_link_tag "movies", :media => "all" %>
   </head>
 
   <body>
-    <div class="text-center">
-      <div class="col-xs-12">
-        <div class="movie-title">
-          Lv.1：人生逆転サロンの活用法
-        </div>
-          <div class="movie-contents">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/iFMNUM2Q9mg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            <div class="movie-description">
-            </div>
-        　</div>
+    <% @movies.first(10).each do |movie| %> 
+      <div class="text-center">
+      <div class="movie-title">
+        <%= movie.title %>
       </div>
-  </div>   
+        <div class="movie-contents">
+          <iframe width="560" height="315" src="<%= movie.url %>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        　</div>
+  </div> 
+    <% end %>  
   </body>
 </html>
