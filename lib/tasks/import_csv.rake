@@ -28,8 +28,6 @@ namespace :import_csv do
     end
   end
 
-require 'csv'
-
 namespace :import_csv do
   desc "CSVデータインポート"
 
@@ -54,4 +52,18 @@ namespace :import_csv do
   end
 end
 end
+end
+
+namespace :movie_import do
+  desc "動画情報をインポートする"
+  task movies: :environment do
+      def self.import(path)
+      CSV.foreach(path, headers: true) do |row|
+      Movie.create(
+          title: row["title"],
+          url: row["url"]
+      )  
+      end
+    end
+  end
 end
