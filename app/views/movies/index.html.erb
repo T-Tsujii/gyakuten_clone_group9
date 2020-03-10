@@ -1,12 +1,10 @@
-  <body>
-    <% @movies.each do |movie| %> 
-      <div class="text-center">
-      <div class="movie-title">
-        <%= movie.title %>
-      </div>
-        <div class="movie-contents">
-          <iframe width="560" height="315" src="<%= movie.url %>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        　</div>
+<% @movies.each do |movie| %> 
+  <div class="text-center">
+    <div class="movie-title">
+      <%= movie.title %>
+    </div>
+    <div class="movie-contents">
+      <iframe width="560" height="315" src="<%= movie.url %>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
   </div> 
-    <% end %>  
-  </body>
+<% end %>  
