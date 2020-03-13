@@ -5,7 +5,7 @@ class QuestionsController < ApplicationController
   end
 
   def create
-    Question.new(question_params)
+    Question.create(question_params)
   end
 
   def new
@@ -14,7 +14,7 @@ class QuestionsController < ApplicationController
 
   private
     def question_params
-      params.require(:questions).permit(:question,:detail)
+      params.require(:questions).permit(:question, :detail)
     end
 
 end
