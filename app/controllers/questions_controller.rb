@@ -4,13 +4,14 @@ class QuestionsController < ApplicationController
     @questions = Question.all
   end
 
+  def new
+    @question = Question.new
+  end
+
   def create
     Question.create(question_params)
   end
 
-  def new
-    @question = Question.new
-  end
 
   private
     def question_params
