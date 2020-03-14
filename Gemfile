@@ -60,3 +60,9 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 # ターミナルの出力カラー変更
 gem 'colorize'
+
+# markdown
+gem 'redcarpet', '~> 2.3.0'
+
+# シンタックスハイライト
+gem 'coderay'

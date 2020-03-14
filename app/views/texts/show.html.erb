@@ -1,0 +1,6 @@
+<div class="container">
+  <h2><%= @texts.title %></h2>
+  <p>
+    <%= markdown(@texts.content).html_safe %>
+  </p>
+</div>
