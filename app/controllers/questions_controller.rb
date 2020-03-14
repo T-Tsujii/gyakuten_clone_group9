@@ -10,7 +10,6 @@ class QuestionsController < ApplicationController
   end
 
   def create
-    binding.pry
     Question.create(question_params)
   end
 
