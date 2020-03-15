@@ -12,7 +12,12 @@ class QuestionsController < ApplicationController
   def create
     Question.create(question_params)
 
-    flash[:notice] = "登録完了しました！"
+    if Question.create(question_params)
+      flash[:notice] = "登録完了"
+    else
+      flash[:alert] = "もう一度やり直してください"
+    end
+
     redirect_to action: 'index'
   end
 

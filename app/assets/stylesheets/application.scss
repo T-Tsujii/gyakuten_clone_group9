@@ -28,6 +28,10 @@ margin: 0 auto;
 @extend .alert-danger;
 }
 
+.alert-notice {
+@extend .alert-success;
+}
+
 .footer a {
 padding: 0 20px;
 font-size: 2em;
