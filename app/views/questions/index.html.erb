@@ -8,11 +8,11 @@
 
    <%= form_with url: questions_path,model:@question,local: true do |form| %>
      <div class="form-group d-flex flex-column">
-       <%= form.label :questions, "【質問】" %>
+       <%= form.label :title, "【質問】" %>
        <%= form.text_area :title, rows: 3,class: "form-control" %>
      </div>
      <div class="form-group d-flex flex-column">
-       <%= form.label :questions, "【詳細】" %>
+       <%= form.label :detail, "【詳細】" %>
        <%= form.text_area :detail, rows: 5,class: "form-control"  %>
      </div>
      <div class="form-group">

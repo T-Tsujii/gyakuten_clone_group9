@@ -7,7 +7,9 @@ class QuestionsController < ApplicationController
 
   def create
 
-    if Question.create(question_params)
+      @question = Question.new
+
+    if Question.save(question_params)
       flash[:notice] = "登録完了"
       redirect_to action: 'index'
     else
