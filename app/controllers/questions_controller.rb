@@ -5,17 +5,19 @@ class QuestionsController < ApplicationController
     @question = Question.new
   end
 
+
   def create
 
-      @question = Question.new
+    @question = Question.new(question_params)
 
-    if @question.save(question_params)
+    if @question.save
       flash[:notice] = "登録完了"
       redirect_to action: 'index'
     else
       flash.now[:alert] = "もう一度やり直してください"
       render :index
     end
+
   end
 
   private
