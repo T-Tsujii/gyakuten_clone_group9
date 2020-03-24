@@ -7,5 +7,4 @@ Rails.application.routes.draw do
   resources :questions
   resources :users, :texts
   resources :movies
-  resources :solutions
 end
