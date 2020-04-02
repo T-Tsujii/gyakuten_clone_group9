@@ -3,8 +3,11 @@ class QuestionsController < ApplicationController
   def index
     @questions = Question.all.order(created_at: :"DESC")
     @question = Question.new
-  end
+  end 
 
+  def new
+    
+  end
 
   def create
 
@@ -22,10 +25,12 @@ class QuestionsController < ApplicationController
 
   def show
     @question = Question.find(params[:id])
+    @solutions = Solution.find(params[:question_id])
+    @solution = Solution.new
   end
+
   private
     def question_params
       params.require(:question).permit(:title, :detail)
     end
-
 end

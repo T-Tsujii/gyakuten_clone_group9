@@ -1,9 +1,7 @@
 class SolutionsController < ApplicationController
   
-  def create
-  end
-
-  private
-  def solution_params
+  def create 
+   @solution = 
+   @question.solutions.build(~~~)
   end
 end
