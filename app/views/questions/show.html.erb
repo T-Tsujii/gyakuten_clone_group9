@@ -8,13 +8,14 @@
 <h5>【詳細】</h5>
 <p><p><%= markdown(@question.detail).html_safe %></p>
 </div>
+<%= @solutions %>
 
 <div class="container">
   <h1>回答投稿</h1>
     
     <div class="form-group">
       <label class="control-label" for="solution_content">【回答】</label>
-      <%= form_with(url: '#', local: true) do |f| %>
+      <%= form_with url:'/questions/:question_id/solutions' do |f| %>
       <textarea class="form-control initial-height
                             " rows="5" name="solution[content]" id="solution_content">
 </textarea>
