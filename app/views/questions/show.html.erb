@@ -8,6 +8,7 @@
     <h5>【詳細】</h5>
       <p><p><%= markdown(@question.detail).html_safe %></p>
   </div>
+  <hr>
   <div class="solutions">
     <% @solutions.each do |solution| %>
       <h5>【回答】</h5>
@@ -15,7 +16,7 @@
     <% end %>  
   </div>
 
-  <div class="container">
+  <div class="solution-container">
     <h1>回答投稿</h1>
         <%= form_with model: [@question, @solution], local: true do |f| %>
           <div class="form-group d-flex flex-column">
