@@ -1,29 +1,31 @@
 <div class="text-center">
-<div class="solution-title">
-<h5>【質問】</h5>
-<p><%= markdown(@question.title).html_safe %></p>
-</div>
-<hr>
-<div class="solution-detail">
-<h5>【詳細】</h5>
-<p><p><%= markdown(@question.detail).html_safe %></p>
-</div>
-<%= @solutions %>
+  <div class="solution-title">
+    <h5>【質問】</h5>
+     <p><%= markdown(@question.title).html_safe %></p>
+  </div>
+  <hr>
+  <div class="solution-detail">
+    <h5>【詳細】</h5>
+      <p><p><%= markdown(@question.detail).html_safe %></p>
+  </div>
+  <div class="solutions">
+    <% @solutions.each do |solution| %>
+      <h5>【回答】</h5>
+      <p class="solution-content"><%= markdown(solution.content).html_safe %></p>
+    <% end %>  
+  </div>
 
-<div class="container">
-  <h1>回答投稿</h1>
-    
-    <div class="form-group">
-      <label class="control-label" for="solution_content">【回答】</label>
-      <%= form_with url:'/questions/:question_id/solutions' do |f| %>
-      <textarea class="form-control initial-height
-                            " rows="5" name="solution[content]" id="solution_content">
-</textarea>
-    </div>
-    <div class="form-group">
-      <input type="submit" name="commit" value="送信" class="btn btn-primary btn-block btn-lg" data-confirm="投稿しますか？" data-disable-with="送信" />
-    </div>
-    <% end %>
-</form></div>
-    </div>
+  <div class="container">
+    <h1>回答投稿</h1>
+        <%= form_with model: [@question, @solution], local: true do |f| %>
+          <div class="form-group d-flex flex-column">
+            <%= f.label :content, "【回答】" %>
+            <%= f.text_area :content, rows: 5,class: "form-control"  %>
+          </div>
+            <div class="form-group">
+              <%= f.submit "送信", class: "btn btn-primary btn-block btn-lg" %>
+            </div>
+        <% end %>
+        </form>
+  </div>      
 </div>
