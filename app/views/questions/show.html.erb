@@ -1,18 +1,20 @@
 <div class="text-center">
   <div class="solution-title">
     <h5>【質問】</h5>
-     <p><%= markdown(@question.title).html_safe %></p>
+     <p class="text"><%= markdown(@question.title).html_safe %></p>
   </div>
   <hr>
   <div class="solution-detail">
     <h5>【詳細】</h5>
-      <p><p><%= markdown(@question.detail).html_safe %></p>
+    <p class="text"><p><%= markdown(@question.detail).html_safe %></p></p>
   </div>
   <hr>
   <div class="solutions">
     <% @solutions.each do |solution| %>
-      <h5>【回答】</h5>
-      <p class="solution-content"><%= markdown(solution.content).html_safe %></p>
+      <p class="solution-content">
+        <h5>【回答】</h5>
+        <%= markdown(solution.content).html_safe %>
+      </p>
     <% end %>  
   </div>
 
